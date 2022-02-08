@@ -29,11 +29,11 @@ class DataBase:
         self.conn.commit()
 
     def drop(self):
-        self.cursor.execute("DROP table book;")
-        self.cursor.execute("DROP table users;")
+        self.cursor.execute("DROP table if exists book;")
+        self.cursor.execute("DROP table if exists users;")
 
 
-a = DataBase()
+# a = DataBase()
 # a.drop()
 # a.create_users()
 # a.create_book()
